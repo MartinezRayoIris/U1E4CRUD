@@ -1,0 +1,72 @@
+
+package ejercicio4;
+
+import java.util.Scanner;
+
+
+public class Ejercicio4 extends cod{
+     Scanner k= new Scanner (System.in);
+     cod n= new cod();
+public void menu(){
+    int j,t=0;
+      int a=1;
+do{
+System.out.println("Que desea hacer");
+System.out.println("1.Insertar datos a la lista");
+System.out.println("2.Leer lista");
+System.out.println("3.Actualizar lista");
+System.out.println("4.Borrar elemento o toda la lista");
+System.out.println("5.salir");
+j=k.nextInt();
+int h,g;
+switch(h=j){
+    case 1: 
+        n.inda();
+        n.re();
+        break;
+    case 2: 
+        n.rec();
+      
+        t=a;
+        break;
+    case 3:
+         System.out.println("***************************");
+        if(n.datos.isEmpty()){
+   System.out.println("Su lista esta vacia");
+   t=1;
+   }else {
+   System.out.println("Que posicion quiere modificar?");
+   p=k.nextInt();
+   System.out.println("Ingrese el dato");
+   int b=k.nextInt();
+   n.datos.set(p,b);
+   for(int i=0; i<n.datos.size();i++){
+   System.out.println(""+i+"."+n.datos.get(i));
+   
+   }
+  
+    n.re();
+   }
+         break;
+    case 4: 
+        n.bor();
+        n.re();
+     break;
+    case 5:
+        n.salir();
+         break;
+    default: 
+        System.out.println("Esa opcion no existe");
+        n.re();
+     break;
+}
+}while(n.t==1);
+
+}
+  
+    public static void main(String[] args) {
+        Ejercicio4 d= new Ejercicio4();
+        d.menu();
+    }
+    
+}
