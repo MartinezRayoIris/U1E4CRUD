@@ -1,0 +1,67 @@
+package ejercicio4;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class cod  {
+    int d,p,re,l,x,t,g;
+   List<Integer> datos = new ArrayList<Integer>();
+    Scanner k= new Scanner (System.in);
+     //cod u= new cod();
+   public void inda(){
+  System.out.println("***************************");
+   System.out.println("Cuantos datos desea ingresar?");
+   d=k.nextInt();
+   for(int i=1;i<=d;i++){
+   System.out.println("Ingrese dato por dato");
+   x=k.nextInt();
+   datos.add(x);
+   //desea ingresar al menu o salir
+   }
+   }
+   public void rec(){
+        System.out.println("***************************");
+   for(int i=0; i<datos.size();i++){
+   System.out.println(""+i+"."+datos.get(i));
+   //menu
+   }
+   }
+  
+   public void bor(){
+        System.out.println("***************************");
+    if(datos.isEmpty()){
+   System.out.println("Su lista esta vacia");
+   
+   }else {
+     for(int i=0; i<datos.size();i++){
+   System.out.println(""+i+".   "+datos.get(i));
+   }
+     System.out.println("Que desea hacer 1.Borrar elemtento 2.Borrar toda la lista");
+     re=k.nextInt();
+     if(re==1){
+     System.out.println("Que elemento desea borrar?");
+   p=k.nextInt();
+   datos.remove(p);
+   for(int i=0; i<datos.size();i++){
+   System.out.println(""+i+".   "+datos.get(i));
+   }
+     }else{
+     datos.clear();
+     }
+    }
+   }
+   public void salir(){
+   System.exit(0);
+   }
+   public void re(){
+    System.out.println("¿Que desea hacer? 1.Menu 2.salir");
+     g=k.nextInt();
+    if(g==1){
+    t=g;
+    }else{
+    System.exit(0);
+    }
+    }    
+}
